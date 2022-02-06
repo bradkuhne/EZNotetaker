@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports.getNotes = () => {
-    return fs.readFileSync(path.join(__dirname + '/public/db.json'), 'utf8');
-};
+// module.exports.getNotes = () => {
+//     return fs.readFileSync(path.join(__dirname + '/public/db.json'), 'utf8');
+// };
 
 module.exports.postNotes = (note) => {
     // Destructuring assignment for the items in req.body
@@ -19,7 +19,6 @@ module.exports.postNotes = (note) => {
         };
 
         // Obtain existing notes
-        console.log ("THIS IS THE PATH NAME FORM dirname: " + __dirname);
         fs.readFile(path.join(__dirname +'/db.json'), 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
@@ -46,8 +45,6 @@ module.exports.postNotes = (note) => {
             status: 'success',
             body: newNote,
         };
-
-        console.log(response);
         res.json(response);
     } else {
         res.json('Error in posting note');
