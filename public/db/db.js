@@ -2,24 +2,20 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports.getNotes = () => {
-    console.log("*******  INSIDE GET NOTES in db.js *********");
     return fs.readFileSync(path.join(__dirname + '/public/db.json'), 'utf8');
 };
 
 module.exports.postNotes = (note) => {
-    console.log("inside post notes " + JSON.stringify(note));
-    // **** ADD POST HERE *****
-       // Destructuring assignment for the items in req.body
-    const noteTitle = note.title;
-    const noteText = note.text;
-    console.log ("noteTitle: " + noteTitle + " noteText: " + noteText);
-
+    // Destructuring assignment for the items in req.body
+    const title = note.title;
+    const text = note.text;
+    
     // If all the required properties are present
-    if (noteTitle && noteText) {
+    if (title && text) {
         // Variable for the object we will save
         const newNote = {
-            noteTitle,
-            noteText,
+            title,
+            text,
         };
 
         // Obtain existing notes

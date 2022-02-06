@@ -1,17 +1,23 @@
 const path = require('path');
 const router = require("express").Router();
-const dbNotes = require('../db/db.js');
+const fs = require('fs');
 
-console.log ("INSIDE THE API.JS Script !!!!");
+
+const dbNotesActions = require('../db/db.js');
+
+
 
 router.get('/notes', (req, res) => {
-    console.log ("Inside get notes router function of api.js");
-    res.status(200).json(JSON.parse(dbNotes.getNotes()));
+	fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8', (err, data) => {
+		console.log(err);
+		console.log(data);
+		res.send(data)
+	});
 });
 
 router.post("/notes", (req, res) => {
     const note = req.body;
-    dbNotes.postNotes(note);
+    dbNotesActions.postNotes(note);
     res.status(200).send("Note added!!!")
 });
 

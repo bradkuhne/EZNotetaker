@@ -26,7 +26,6 @@ const hide = elem => {
 let activeNote = {};
 
 const getNotes = () =>
-  console.log ("!!!!!!!!!!!  ABOUT TO TRY TO FETCH NOTES via GET");
   fetch('/api/notes', {
     method: 'GET',
     headers: {
@@ -120,8 +119,7 @@ const handleRenderSaveBtn = () => {
 // Render the list of note titles
 const renderNoteList = async notes => {
   let jsonNotes = await notes.json();
-  console.log ("$$$$$  TRYING TO DISPLAY NOTES: " + notes.json  + "Windows pathname: " + "window.location.pathname");
-  if (window.location.pathname === '/notes') {
+   if (window.location.pathname === '/notes') {
     noteList.forEach(el => (el.innerHTML = ''));
   }
 
@@ -173,9 +171,7 @@ const renderNoteList = async notes => {
 };
 
 // Gets notes from the db and renders them to the sidebar
-const getAndRenderNotes = () => getNotes()
-.then (console.log("CAME BACK FROM GET NOTES"))
-.then(renderNoteList);
+const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
