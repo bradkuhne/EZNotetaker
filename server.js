@@ -1,7 +1,7 @@
+const { urlencoded } = require('express');
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const dbNotes = require('./public/db/db.json');
 const htmlRoutes = require('./public/routes/html');
 const apiRoutes = require('./public/routes/api');
 

@@ -1,14 +1,17 @@
-
+const path = require('path');
 const router = require("express").Router();
-const db = require('../db/db.js');
+const dbNotes = require('../db/db.js');
 
-router.get("/notes", (req, res) => {
-    res.status(200).json(JSON.parse(db.getNotes()));
+console.log ("INSIDE THE API.JS Script !!!!");
+
+router.get('/notes', (req, res) => {
+    console.log ("Inside get notes router function of api.js");
+    res.status(200).json(JSON.parse(dbNotes.getNotes()));
 });
 
 router.post("/notes", (req, res) => {
     const note = req.body;
-    db.postNotes(note);
+    dbNotes.postNotes(note);
     res.status(200).send("Note added!!!")
 });
 
