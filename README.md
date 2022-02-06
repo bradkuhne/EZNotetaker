@@ -1,6 +1,9 @@
 ## Description
   
  The EZ Note Taker application allows a user to create simple notes with titles and save them to a json file.
+
+ URL of Deployed Application: https://bradkuhne.github.io/EZNotetaker/
+ URL of GitHub repository: https://github.com/bradkuhne/EZNotetaker
   
 ## License
   
