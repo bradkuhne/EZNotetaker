@@ -1,4 +1,50 @@
-# Note Taker Starter Code
+## Description
+  
+ The EZ Note Taker application allows a user to create simple notes with titles and save them to a json file.
+  
+## License
+  
+ [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+  
+ The Unlicense is a template for disclaiming copyright monopoly interest in software you've written; in other words, it is a template for dedicating your software to the public domain. It combines a copyright waiver patterned after the very successful public domain SQLite project with the no-warranty statement from the widely-used MIT/X11 license.
+  
+## Table of Contents
+  
+* [Installation](#Installation)
+  
+* [Usage](#Usage)
+  
+* [Contributions](#Contributions)
+  
+* [Tests](#Tests)
+  
+* [Questions](#Questions)
+  
+## Installation
+  
+ To install EZ Note Taker you just need to have ExpressJS installed.  After that, just start the server with Node Server.JS.
+  
+## Usage
+  
+ The EZ Notetaker could be used by anyone who wants to save simple notes.
+  
+## Contributions
+  
+ This project was solely developed by Brad Kuhne.
+  
+## Test Instructions
+  
+ This project was not developed with TDD.  To test it, run index.js and compare results to expected results.
+  
+## Questions
+  
+ https://github.com/bradkuhne  Email: bjkuhne@aol.com
+
+
+
+
+
+
 
 
 User Story
